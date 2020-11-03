@@ -118,4 +118,36 @@ These are all supported XML tags with their settings.
 
 ## Wheel 
     - drive (vec2) - Control how much of the engine power is applied to wheel. Normally 0.0 or 1.0.
+    - steer (float)
+    - travel (vec2) - Suspension travel distance from normal position, min max along Y axis.
+    
+## Rope 
+    - size (float) - Rope attachment point radius
+    - color (vec) - Rope color
+    - slack (float) - Desired slack. Can be negative for more tension.
+    - strength (float) - Rope strength. Negative is infinite.
+    - maxstretch (float) - Rope breaks if stretching more than this
+    
+## Boundary
 
+## Screen
+    - size (vec2) - width and height
+    - bulge (vec2) - bulge height at center
+    - resolution (vec2) - render resolution
+    - script (string) - script location relative to data folder
+    - enabled (bool) - 
+    - interactive (false)
+    - emissive (float?)
+    - fxraster (int or bool?)
+    - fxca (int or bool?)
+    - fxnosie( int or bool?)
+    - fxglitch(int or bool?)
+
+## Trigger
+    - type(string)
+    - size (int)
+    - sound (string)
+    - soundramp (float)
+    
+# Script
+    - file (string) -
