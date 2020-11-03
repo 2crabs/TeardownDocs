@@ -127,6 +127,17 @@ These are all supported XML tags with their settings.
     - slack (float) - Desired slack. Can be negative for more tension.
     - strength (float) - Rope strength. Negative is infinite.
     - maxstretch (float) - Rope breaks if stretching more than this
+    Exemple of rope usage
+    
+### Usage
+```xml
+<rope>
+    <!-- Attach points -->
+    <location pos="1.0 1.0 0.0"/>
+    <location pos="10.0 1.0 0.0"/>
+</rope>
+```
+    
     
 ## Boundary
 
@@ -142,6 +153,8 @@ These are all supported XML tags with their settings.
     - fxca (int or bool?)
     - fxnosie( int or bool?)
     - fxglitch(int or bool?)
+
+
 
 ## Trigger
     - type(string)
