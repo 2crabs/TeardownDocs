@@ -6,9 +6,9 @@ These are the examples of the XML in use
 
 ## Scene
     - shadowVolume (vec) - World bounds in meters. Everything inside this volume cast shadows. Keep as small as possible. Below is an eample of a world with shadows and one without.
-With             |  Without
-:-------------------------:|:-------------------------:
-<img src="images/ShadowVolumeWith.png" width="300">  | <img src="images/ShadowVolumeWithout.png" width="300">
+With | Without
+:-:|:-:
+<img src="images/ShadowVolumeWith.png" width="300"> | <img src="images/ShadowvolumeWithout.png" width="300">
 
 ## Environment	
     - skybox (string) - The dds file used as skybox. Search path is data/env.
