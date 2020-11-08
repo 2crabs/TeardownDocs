@@ -11,29 +11,30 @@ With | Without
 <img src="images/ShadowVolumeWith.png" width="500"> | <img src="images/ShadowvolumeWithout.png" width="500">
 
 ## Environment	
-    - skybox (string) - The dds file used as skybox. Search path is data/env. Available ones are cloudy, day, moonlit, night, night_clear, and sunset.
-    **in use**: ``` <environment template="sunny" skybox="night.dds"/> ```
-    - skyboxtint (vec) - The sky box color tint
-    - skyboxbrightness (float) - The sky box brightness scale
-    - skyboxrot (float) - The sky box rotation around y axis. Use this to determine angle of sun shadows.
-    - ambient (float) - Determines how much the skybox will light up the scene.
-    - fogColor (vec) - Color used for distance fog
-    - fogParams (vec4) - Four fog parameters: fog start, fog end, fog amount, fog exponent (higher gives steeper falloff along y axis)
-    - sunBrightness (float?) - Light contribution by sun (gives directional shadows)
-    - sunColorTint (vec) - Color tint of sunlight. Multiplied with brightest spot in skybox.
-    - sunDir (int?) - Direction of sunlight. A value of zero will point from brightest spot in skybox 
-    - sunSpread (int?) - Divergence of sunlight as a fraction. A value of 0.05 will blur shadows 5 cm per meter
-    - sunLength (int?) - Maximum length of sunlight shadows. AS low as possible for best performance.
-    - sunFogScale (float) - Volumetric fog caused by sunlight
-    - sunGlare (float) - Sun glare scaling
-    - exposure (vec2) - Limits for automatic exposure, min max
-    - brightness (unknown, possibly a float) - Desired scene brightness that controls automatic exposure. Set higher for brighter scene.
-    - wetness (int?) - Base wetness
-    - puddleamount (int?) - Puddle coverage. Fraction between zero and one.
-    - puddlesize (float) - Puddle size
-    - rain (int?) - Amount of rain
-    - nightlight (bool) - If set to false, all lights tagged night will be removed
-    - ambience (string) - Environment sound path [volume]
+  - skybox (string) - The dds file used as skybox. Search path is data/env. Available ones are cloudy, day, moonlit, night, night_clear, and sunset.\
+**in use**: ``` <environment template="sunny" skybox="night.dds"/> ```
+
+- skyboxtint (vec) - The sky box color tint
+- skyboxbrightness (float) - The sky box brightness scale
+- skyboxrot (float) - The sky box rotation around y axis. Use this to determine angle of sun shadows.
+- ambient (float) - Determines how much the skybox will light up the scene.
+- fogColor (vec) - Color used for distance fog
+- fogParams (vec4) - Four fog parameters: fog start, fog end, fog amount, fog exponent (higher gives steeper falloff along y axis)
+- sunBrightness (float?) - Light contribution by sun (gives directional shadows)
+- sunColorTint (vec) - Color tint of sunlight. Multiplied with brightest spot in skybox.
+- sunDir (int?) - Direction of sunlight. A value of zero will point from brightest spot in skybox 
+- sunSpread (int?) - Divergence of sunlight as a fraction. A value of 0.05 will blur shadows 5 cm per meter
+- sunLength (int?) - Maximum length of sunlight shadows. AS low as possible for best performance.
+- sunFogScale (float) - Volumetric fog caused by sunlight
+- sunGlare (float) - Sun glare scaling
+- exposure (vec2) - Limits for automatic exposure, min max
+- brightness (unknown, possibly a float) - Desired scene brightness that controls automatic exposure. Set higher for brighter scene.
+- wetness (int?) - Base wetness
+- puddleamount (int?) - Puddle coverage. Fraction between zero and one.
+- puddlesize (float) - Puddle size
+- rain (int?) - Amount of rain
+- nightlight (bool) - If set to false, all lights tagged night will be removed
+- ambience (string) - Environment sound path [volume]
 
 ## Group 
     - layer (string?, value?) - Override parameter in group. Example dynamic=true will set any parameter named dynamic of every entity in this group to true
