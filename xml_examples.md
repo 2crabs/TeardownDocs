@@ -12,7 +12,7 @@ With | Without
 
 ## Environment	
     - skybox (string) - The dds file used as skybox. Search path is data/env. Available ones are cloudy, day, moonlit, night, night_clear, and sunset.
-        **use**: <environment template="sunny" skybox="night.dds"/>
+    **in use**: ``` <environment template="sunny" skybox="night.dds"/> ```
     - skyboxtint (vec) - The sky box color tint
     - skyboxbrightness (float) - The sky box brightness scale
     - skyboxrot (float) - The sky box rotation around y axis. Use this to determine angle of sun shadows.
