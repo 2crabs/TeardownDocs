@@ -5,7 +5,7 @@ These are all supported XML tags with their settings.
 <a href="lua.md">Lua documentation here</a>
 
 ## Scene
-    - shadowsVolume (vec) - World bounds in meters. Everything inside this volume cast shadows. Keep as small as possible.
+    - shadowVolume (vec) - World bounds in meters. Everything inside this volume cast shadows. Keep as small as possible.
 
 ## Environment	
     - skybox (string) - The dds file used as skybox. Search path is data/env.
