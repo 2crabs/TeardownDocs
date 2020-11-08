@@ -6,7 +6,7 @@ These are the examples of the XML in use
 
 ## Scene
     - shadowVolume (vec) - World bounds in meters. Everything inside this volume cast shadows. Keep as small as possible.
-    ![](images/shadowvolumewith.png)
+![](images/ShadowVolumeWith.png)
 
 ## Environment	
     - skybox (string) - The dds file used as skybox. Search path is data/env.
