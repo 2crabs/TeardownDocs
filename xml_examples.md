@@ -1,12 +1,12 @@
 # Examples of XML
 
-This is the examples of the XML in use
+These are the examples of the XML in use
 
 <a href="lua.md">Lua documentation here</a>
 
 ## Scene
     - shadowVolume (vec) - World bounds in meters. Everything inside this volume cast shadows. Keep as small as possible.
-    ![](images/ShadowVolumeWith.png =230x)
+    ![](images/ShadowVolumeWith.png)
 
 ## Environment	
     - skybox (string) - The dds file used as skybox. Search path is data/env.
