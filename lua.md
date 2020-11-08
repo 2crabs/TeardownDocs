@@ -3,7 +3,7 @@
 This is an attempt at documenting the Teardown lua api. 
 
 ## UI
-
+```
 - UiFont()
 - UiSound()
 - UiPush()
@@ -12,7 +12,7 @@ This is an attempt at documenting the Teardown lua api.
 - UiHeight()
 - UiCenter()
 - UiMIddle()
-  UiColor()
+- UiColor()
 - UIColorFilter()
 - UiTranslate()
 - UiRotate()
@@ -29,8 +29,8 @@ This is an attempt at documenting the Teardown lua api.
 - UiIsMouseInRect()
 - UiIsMouseDown()
 - UiIsMousePressed()
-  UiIsMouseReleased
-  UiIsKeyPressed()
+- UiIsMouseReleased
+- UiIsKeyPressed()
 - UiWorldToPixel
 - UiGetRelativePos
 - UiBlur
@@ -56,9 +56,10 @@ This is an attempt at documenting the Teardown lua api.
 - UiImageButton
 - UiBlankButton
 - UiSlider
+```
 
 ## Getter
-
+```
 - GetInt
 - GetFloat
 - GetBool
@@ -101,9 +102,10 @@ This is an attempt at documenting the Teardown lua api.
 - GetVehicleBody
 - GetBodyVehicle
 - GetCameraTransform
+```
 
 ## Setters
-
+```
 - SetInt
 - SetFloat
 - SetBool
@@ -122,9 +124,10 @@ This is an attempt at documenting the Teardown lua api.
 - SetLightColor
 - SetTriggerTransform
 - SetPlayerTransform
+```
 
 ## Strings
-
+```
 - game.tool.gun.damage
 - game.tool.shotgun.damage
 - game.tool.rocket.damage
@@ -185,4 +188,4 @@ This is an attempt at documenting the Teardown lua api.
 - game.path.save
 - game.path.load
 - game.path.has
-
+```
