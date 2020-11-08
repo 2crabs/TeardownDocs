@@ -44,6 +44,8 @@ These are all supported XML tags with their settings.
 ## Vox 			
     - file(string) - Magicavoxel .vox file. Search path data/vox
     - object (string?) - Vox file sub object
+    - pos (vec3) - Position in meters
+    - rot (vec3) - Rotation in degrees (e.g. 0-360) (example value to rotate backwards: rot="0 180 0")
     - scale (int?) - Voxel scaling. Use for background objects only with disabled collisions.
 
 ## Light		
@@ -60,6 +62,8 @@ These are all supported XML tags with their settings.
     - glare (int?) - Glare amount
 
 ## SpawnPoint
+    - pos (vec3) - Position in meters
+    - rot (vec3) - Rotation in degrees (e.g. 0-360) (example value to rotate backwards: rot="0 180 0")
 
 ## Location
 
@@ -142,6 +146,8 @@ These are all supported XML tags with their settings.
 ## Boundary
 
 ## Screen
+    - pos (vec3) - Position in meters
+    - rot (vec3) - Rotation in degrees (e.g. 0-360) (example value to rotate backwards: rot="0 180 0")
     - size (vec2) - width and height
     - bulge (vec2) - bulge height at center
     - resolution (vec2) - render resolution
