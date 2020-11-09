@@ -5,21 +5,35 @@ These are the examples of the XML in use
 <a href="lua.md">Lua documentation here</a>
 
 ## Scene
-    - shadowVolume (vec) - World bounds in meters. Everything inside this volume cast shadows. Keep as small as possible. Below is an eample of a world with shadows and one without.
-With | Without
-:-:|:-:
-<img src="images/ShadowVolumeWith.png" width="500"> | <img src="images/ShadowvolumeWithout.png" width="500">
+- shadowVolume (vec) - World bounds in meters. Everything inside this volume cast shadows. Keep as small as possible. Below is an example of an area with shadows and one without.
+    With | Without
+    :-:|:-:
+    <img src="images/ShadowVolumeWith.png" width="500"> | <img src="images/ShadowvolumeWithout.png" width="500">
 
 ## Environment	
   - skybox (string) - The dds file used as skybox. Search path is data/env. Available ones are cloudy, day, moonlit, night, night_clear, and sunset.\
-**in use**: ``` <environment template="sunny" skybox="night.dds"/> ```
+    **Example**: ``` <environment template="sunny" skybox="night.dds"/> ```
 
   - skyboxtint (vec) - The sky box color tint. Below is an example of it's effect on the world\
-**in use**: ``` <environment template="sunny" skyboxtint="1 0.3 0.3"/> ```
-<img src="images/Tint.png" width="500">
-- skyboxbrightness (float) - The sky box brightness scale
-- skyboxrot (float) - The sky box rotation around y axis. Use this to determine angle of sun shadows.
-- ambient (float) - Determines how much the skybox will light up the scene.
+    **Example**: ``` <environment template="sunny" skyboxtint="1 0.3 0.3"/> ```\
+    <img src="images/Tint.png" width="500">
+
+  - skyboxbrightness (float) - The sky box brightness scale. This can be used to change how dark or light the world is. Below is and example of the difference it can make.\
+    **Example**: ``` <environment template="night"  skyboxbrightness="0.04">```\
+
+   skyboxbrightness="1" | skyboxbrightness="0.05"
+   :-:|:-:
+   <img src="images/BrightnessTwo.png" width="500"> | <img src="images/BrightnessOne.png" width="500">
+
+  - skyboxrot (float) - The sky box rotation around y axis. Use this to determine angle of sun shadows.\
+    **Example**: ``` <environment template="night" skyboxrot="23.3">```\
+    
+   skyboxrot="0" | skyboxrot="90"
+   :--:|:--:
+   <img src="images/SkyboxrotOne.png" width="500"> | <img src="images/SkyboxrotTwo.png" width="500">
+
+  - ambient (float) - Determines how much the skybox will light up the scene.\
+    **Example**: ``` <environment template="sunset" ambient="1.4">```\
 - fogColor (vec) - Color used for distance fog
 - fogParams (vec4) - Four fog parameters: fog start, fog end, fog amount, fog exponent (higher gives steeper falloff along y axis)
 - sunBrightness (float?) - Light contribution by sun (gives directional shadows)
