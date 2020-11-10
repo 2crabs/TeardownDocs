@@ -19,34 +19,91 @@ These are the examples of the XML in use
     <img src="images/Tint.png" width="500">
 
   - skyboxbrightness (float) - The sky box brightness scale. This can be used to change how dark or light the world is. Below is and example of the difference it can make.\
-    **Example**: ``` <environment template="night"  skyboxbrightness="0.04">```\
+    **Example**: ``` <environment template="night"  skyboxbrightness="0.04"/>```
 
    skyboxbrightness="1" | skyboxbrightness="0.05"
    :-:|:-:
    <img src="images/BrightnessTwo.png" width="500"> | <img src="images/BrightnessOne.png" width="500">
 
   - skyboxrot (float) - The sky box rotation around y axis. Use this to determine angle of sun shadows.\
-    **Example**: ``` <environment template="night" skyboxrot="23.3">```\
+    **Example**: ``` <environment template="night" skyboxrot="23.3"/>```
     
    skyboxrot="0" | skyboxrot="90"
    :--:|:--:
    <img src="images/SkyboxrotOne.png" width="500"> | <img src="images/SkyboxrotTwo.png" width="500">
 
   - ambient (float) - Determines how much the skybox will light up the scene.\
-    **Example**: ``` <environment template="sunset" ambient="1.4">```\
-- fogColor (vec) - Color used for distance fog
-- fogParams (vec4) - Four fog parameters: fog start, fog end, fog amount, fog exponent (higher gives steeper falloff along y axis)
-- sunBrightness (float?) - Light contribution by sun (gives directional shadows)
-- sunColorTint (vec) - Color tint of sunlight. Multiplied with brightest spot in skybox.
-- sunDir (int?) - Direction of sunlight. A value of zero will point from brightest spot in skybox 
-- sunSpread (int?) - Divergence of sunlight as a fraction. A value of 0.05 will blur shadows 5 cm per meter
-- sunLength (int?) - Maximum length of sunlight shadows. AS low as possible for best performance.
-- sunFogScale (float) - Volumetric fog caused by sunlight
-- sunGlare (float) - Sun glare scaling
-- exposure (vec2) - Limits for automatic exposure, min max
-- brightness (unknown, possibly a float) - Desired scene brightness that controls automatic exposure. Set higher for brighter scene.
-- wetness (int?) - Base wetness
-- puddleamount (int?) - Puddle coverage. Fraction between zero and one.
+    **Example**: ``` <environment template="sunset" ambient="1.4"/>```
+
+  - fogColor (vec) - Color used for distance fog\
+   **Example**: ``` <environment template="foggy" fogColor="1 0.4 0.4"/>```\
+   <img src="images/Fog.png" width="500">
+
+  - fogParams (vec4) - Four fog parameters: fog start, fog end, fog amount, fog exponent (higher gives steeper falloff along y axis)\
+    **Example**: ``` <environment template="foggy" fogParams="0 70 1.5 1.2"/>```
+
+  - sunBrightness (float?) - Light contribution by sun (gives directional shadows)\
+  **Example**: ``` <environment template="sunny" sunBrightness="1.2"/>```
+
+  sunBrightness="1.5" | sunBrightness="0.2"
+   :--:|:--:
+   <img src="images/SunOne.png" width="500"> | <img src="images/SunTwo.png" width="500">
+
+  - sunColorTint (vec) - Color tint of sunlight. Multiplied with brightest spot in skybox.\
+    **Example**: ``` <environment template="sunny" sunColorTint="1 0.2 0.2"/>```\
+    <img src="images/SunTint.png" width="500">
+
+  - sunDir (int?) - Direction of sunlight. A value of zero will point from brightest spot in skybox.\
+    **Example**: ``` <environment template="sunny" sunDir="0"/>```
+
+  - sunSpread (int?) - Divergence of sunlight as a fraction. A value of 0.05 will blur shadows 5 cm per meter\
+    **Example**: ``` <environment template="sunny" sunSpread="0.04"/>```
+
+   sunSpread="0" | sunSpread="0.3"
+   :--:|:--:
+   <img src="images/BlurOne.png" width="300"> | <img src="images/BlurTwo.png" width="300">
+
+  - sunLength (int?) - Maximum length of sunlight shadows. AS low as possible for best performance.\
+    **Example**: ``` <environment template="sunny" sunLength="1"/>```
+    
+   sunLength="4" | sunLength="20"
+   :--:|:--:
+   <img src="images/LengthOne.png" width="300"> | <img src="images/LengthTwo.png" width="300">
+
+  - sunFogScale (float) - Volumetric fog caused by sunlight\
+    **Example**: ``` <environment template="sunny" sunFogScale="0.9"/>```
+
+  - sunGlare (float) - Sun glare scaling\
+    **Example**: ``` <environment template="sunny" sunGlare="0.9"/>```
+   
+   sunGlare="2" | sunGlare="0.5"
+   :--:|:--:
+   <img src="images/GlareTwo.png" width="500"> | <img src="images/GlareOne.png" width="500">
+
+  - exposure (vec2) - Limits for automatic exposure, min max\
+    **Example**: ``` <environment template="sunny" exposure="3.3 1.4"/>```
+
+  - brightness (unknown, possibly a float) - Desired scene brightness that controls automatic exposure. Set higher for brighter scene.\
+  **Example**: ``` <environment template="sunny" brightness="1.6"/>```
+  
+   brightness="1.8" | brightness="0.3"
+   :--:|:--:
+   <img src="images/ActualBrightnessOne.png" width="500"> | <img src="images/ActualBrightnessTwo.png" width="500">
+
+  - wetness (int?) - Base wetness\
+    **Example**: ``` <environment template="sunny" wetness="1"/>```
+    
+   wetness="0" | wetness="1"
+   :--:|:--:
+   <img src="images/WetnessOne.png" width="500"> | <img src="images/WetnessTwo.png" width="500">
+
+  - puddleamount (int?) - Puddle coverage. Fraction between zero and one.\
+    **Example**: ``` <environment template="sunny" wetness="0.5" puddleamount="0.5"/>```
+       
+   puddleamount="0.3" | puddleamount="0.6"
+   :--:|:--:
+   <img src="images/WetgroundTwo.png" width="500"> | <img src="images/WetgroundOne.png" width="500">
+
 - puddlesize (float) - Puddle size
 - rain (int?) - Amount of rain
 - nightlight (bool) - If set to false, all lights tagged night will be removed
