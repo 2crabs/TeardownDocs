@@ -1,3 +1,7 @@
+---
+title: This will be used as the title-tag of the page head
+---
+
 ## Teardown API
 
 This is an attempt at documenting the Teardown lua api. 
