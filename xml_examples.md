@@ -104,45 +104,117 @@ These are the examples of the XML in use
    :--:|:--:
    <img src="images/WetgroundTwo.png" width="500"> | <img src="images/WetgroundOne.png" width="500">
 
-- puddlesize (float) - Puddle size
-- rain (int?) - Amount of rain
-- nightlight (bool) - If set to false, all lights tagged night will be removed
-- ambience (string) - Environment sound path [volume]
+  - puddlesize (float) - Puddle size\
+    **Example**: ``` <environment template="sunny" wetness="0.5" puddleamount="0.3" puddlesize="0.5"/>```
+      
+   puddlesize="0.5" | puddlesize="1.5"
+   :--:|:--:
+   <img src="images/puddlesizeTwo.png" width="500"> | <img src="images/puddlesizeOne.png" width="500">
+
+  - rain (int?) - Amount of rain\
+    **Example**: ``` <environment template="night" wetness="1" rain="1"/>```
+
+  - nightlight (bool) - If set to false, all lights tagged night will be removed\
+  **Example**: ``` <environment template="night" nightlight="false"/>```
+
+  - ambience (string) - Environment sound path [volume]
 
 ## Group 
-    - layer (string?, value?) - Override parameter in group. Example dynamic=true will set any parameter named dynamic of every entity in this group to true
+  - layer (string?, value?) - Override parameter in group. Example dynamic=true will set any parameter named dynamic of every entity in this group to true
+
 
 # Compound objects
 
 ## Instance 
-    - file (unknown) - Load prefab instance
+  - file (unknown) - Load prefab instance
 
 ## Body 	
-    - dynamic (bool) - Set to true for a movable body
-    - desc (string) - Text description
+  - dynamic (bool) - Set to true for a movable body\
+    **Example**: 
+    ```xml
+    <body pos="1 1 0" dynamic="true"> 
+        <vox file="LEVEL/example.vox">
+    </body>
+     ```
+
+  - desc (string) - Text description. Can be used to make a textbox appear when looking at the object.\
+    **Example**: ``` <vox prop="true" pos="1 1 0" file="LEVEL/box.vox" texture="10 0.5" desc="A box"/>```\
+    <img src="images/box.png" width="500">
 
 ## Vox 			
-    - file(string) - Magicavoxel .vox file. Search path data/vox
-    - object (string?) - Vox file sub object
-    - pos (vec3) - Position in meters
-    - rot (vec3) - Rotation in degrees (e.g. 0-360) (example value to rotate backwards: rot="0 180 0")
-    - scale (int?) - Voxel scaling. Use for background objects only with disabled collisions.
+  - file(string) - Magicavoxel .vox file. Search path data/vox. LEVEL will make it search in the folder with the same name as the xml document.\
+  **Example**: ``` <vox pos="0 3 -4" file="LEVEL/example.vox"/>```
+
+  - object (string?) - Vox file sub object. Objects can be named under the outline in magicavoxel.\
+  **Example**: ``` <vox pos="4.5 1 -1" file="LEVEL/car.vox" object="wheel"/>```\
+  <img src="images/outline.png" width="200">
+
+  - pos (vec3) - Position in meters\
+   **Example**: ``` <vox pos="0 3 -4" file="LEVEL/position_example.vox"/>```
+
+  - rot (vec3) - Rotation in degrees (e.g. 0-360) (example value to rotate backwards: rot="0 180 0")
+
+  - scale (int?) - Voxel scaling. Use for background objects only with disabled collisions. Below the object on the left has a scale of 1 and the one on the right has a scale of 0.2.\
+    **Example**: ``` <vox pos="2.7 1 0" file="LEVEL/box.vox" scale="0.2"/>```\
+  <img src="images/scale.png" width="500">
 
 ## Light		
-    - type (string) - Type of light source. Can be sphere, cone or area
-    - color (vec) - Light color RGB value. Do not include intensity here. All values should be in between zero and one.
-    - scale (float?) - Light intensity
-    - angle (int)	- Cone angle in the case of a cone light type
-    - penumbra (int?) - Penumbra angle in the case of a cone type
-    - size (float) - Light radius in case of sphere of cone. Width and height in case of area light. Specified in meters.
-    - unshadowed (float) - A small distance in meters that is always unshadowed. Useful to avoid shadows from a nearby light fixture and/or emissive light surface.
-    - fogscale (float?) - Volumetric fog amount
-    - fogiter (float?) - Quality of volumetric fog. Usually leave at one. For very bright and important lights, you may set increase it to avoid flickering.
-    - sound (string) - path [volume]
-    - glare (int?) - Glare amount
+  - type (string) - Type of light source. Can be sphere, cone or area\
+    **Example**: ``` <light pos="0 2.5 0" glare="0.2" scale="3" type="area" size="0.3 1.5"/>```
+   
+   type="sphere" | type="cone" | type="area" 
+   :--:|:--:|:--:
+   <img src="images/sphereLight.png" width="350"> | <img src="images/coneLight.png" width="350"> | <img src="images/areaLight.png" width="350">
+
+  - color (vec) - Light color RGB value. Do not include intensity here. All values should be in between zero and one.\
+  **Example**: ``` <light pos="0 2.5 0" scale="3" type="cone" color="1 0.9 0.3"/>```\
+  <img src="images/lightcolor.png" width="500">
+
+  - scale (float?) - Light intensity\
+    **Example**: ``` <light pos="0 2.5 0" glare="0.2" scale="3" type="area" size="0.3 1.5"/>```
+     
+   scale="1" | scale="3"
+   :--:|:--:
+   <img src="images/lightScaleOne.png" width="500"> | <img src="images/lightScaleTwo.png" width="500">
+
+  - angle (int)	- Cone angle in the case of a cone light type\
+    **Example**: ``` <light pos="0 2.5 0" scale="3" type="cone" angle="65"/>```
+     
+   angle="30" | angle="90"
+   :--:|:--:
+   <img src="images/lightAngleOne.png" width="500"> | <img src="images/lightAngleTwo.png" width="500">
+
+  - penumbra (int?) - Penumbra angle in the case of a cone type
+    **Example**: ``` <light pos="0 2.5 0" scale="3" type="cone" penumbra="65"/>```
+     
+   penumbra="0" | penumbra="50"
+   :--:|:--:
+   <img src="images/penumbraOne.png" width="500"> | <img src="images/penumbraTwo.png" width="500">
+
+  - size (float) - Radius of source in case of sphere. Width and height in case of area light. Specified in meters.\
+    **Example**: ``` <light pos="-3 2 0" scale="3" type="area" size="0.4 1"/>```
+     
+   size="0.5" | size="2"
+   :--:|:--:
+   <img src="images/lightsizeOne.png" width="500"> | <img src="images/lightsizeTwo.png" width="500">
+
+   size="0.5 0.3" | size="2 0.3"
+  :--:|:--:
+   <img src="images/areaOne.png" width="500"> | <img src="images/areaTwo.png" width="500">
+
+  - unshadowed (float) - A small distance in meters that is always unshadowed. Useful to avoid shadows from a nearby light fixture and/or emissive light surface.\
+  **Example**: ``` <light pos="0 2 0" scale="3" type="cone" unshadowed="0.5"/>```
+     
+   unshadowed="0" | unshadowed="1"
+   :--:|:--:
+   <img src="images/unshadowedTwo.png" width="500"> | <img src="images/unshadowedOne.png" width="500">
+  - fogscale (float?) - Volumetric fog amount
+  - fogiter (float?) - Quality of volumetric fog. Usually leave at one. For very bright and important lights, you may set increase it to avoid flickering.
+  - sound (string) - path [volume]
+  - glare (int?) - Glare amount
 
 ## SpawnPoint
-    - pos (vec3) - Position in meters
+    - pos (vec3) - Position in meters. player will spawn at the lowest point with no material above it.
     - rot (vec3) - Rotation in degrees (e.g. 0-360) (example value to rotate backwards: rot="0 180 0")
 
 ## Location
