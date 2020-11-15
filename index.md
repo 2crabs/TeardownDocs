@@ -279,22 +279,51 @@ These are the examples of the XML in use
     **Example**: ``` <joint pos="-0.5 0 0" type="hinge" rotstrength="0.2" sound="true"/>```
 
 ## Water	
-    - type (string) - Geometry type: box or polygon
-    - size (Vec2) - Size in meters along X and Z axes. Only applicable to box
-    - depth (int?) - Depth along negative y axis
-    - wave (float) - Large wave amount
-    - ripple (float) - Small wave amount
-    - motion (float) - Sideways motion amount
-    - foam (float) - Foam amount
+  - type (string) - Geometry type: box or polygon\
+    **Example**: ``` <water pos="0 1.5 0" size="1 1" type="box"/>```
+  - size (Vec2) - Size in meters along X and Z axes. Only applicable to box\
+    **Example**: ``` <water pos="0 1.5 0" size="0.9 3" type="box"/>```
+
+  - depth (int?) - Depth along negative y axis\
+    **Example**: ``` <water pos="0 2 0" depth="2.4"/>```
+
+  - wave (float) - Large wave amount\
+    **Example**: ``` <water pos="0 2 0" wave="1"/>```
+   
+   wave="0.5" | wave="2"
+   :--:|:--:
+   <img src="images/waveSizeTwo.png" width="500"> | <img src="images/waveSizeOne.png" width="500">
+
+  - ripple (float) - Small wave amount\
+    **Example**: ``` <water pos="0 2 0" ripple="0.9"/>```
+   
+   ripple="0.2" | ripple="2"
+   :--:|:--:
+   <img src="images/rippleAmountOne.png" width="500"> | <img src="images/rippleAmountTwo.png" width="500">
+
+  - motion (float) - Sideways motion amount\
+    **Example**: ``` <water pos="0 1 0" motion="1.2"/>```
+   
+   motion="0" | motion="2"
+   :--:|:--:
+   <img src="images/waterMotionOne.gif" width="500"> | <img src="images/waterMotionTwo.gif" width="500">
+
+  - foam (float) - Foam amount\
+    **Example**: ``` <water pos="0 1.5 0" foam="1.4"/>```
+   
+   foam="0.5" | foam="4"
+   :--:|:--:
+   <img src="images/foamOne.png" width="500"> | <img src="images/foamTwo.png" width="500">
+
 
 ## VoxBox 		
-    - size (vec) - Size in voxels
-    - brush (string) - Magicavoxel file to use as brush or 3D texture
-    - object (string?) - Brush file subobject, if any
-    - offset (vec) - Offset into voxel brush, in voxels along x, y and z
-    - material (string) - Set material if no brush is given. Should be one of glass, wood, masonry, plaster, metal, heavymetal, rock, dirt, foliage, unphysical
-    - color (vec) - Color tint, RGB values between zero and one
-    - pbr (vec4) - Additinal PBR properties - reflectivity, shinyness, metalness and emissive. Emissive is in range 0-32, the others in range 0-1
+  - size (vec) - Size in voxels
+  - brush (string) - Magicavoxel file to use as brush or 3D texture
+  - object (string?) - Brush file subobject, if any
+  - offset (vec) - Offset into voxel brush, in voxels along x, y and z
+  - material (string) - Set material if no brush is given. Should be one of glass, wood, masonry, plaster, metal, heavymetal, rock, dirt, foliage, unphysical
+  - color (vec) - Color tint, RGB values between zero and one
+  - pbr (vec4) - Additinal PBR properties - reflectivity, shinyness, metalness and emissive. Emissive is in range 0-32, the others in range 0-1
 
 ## Voxagon 
     - brush (string) - Magicavoxel file to use as brush or 3D texture
