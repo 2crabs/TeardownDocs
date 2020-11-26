@@ -36,7 +36,8 @@ These are the examples of the XML in use
     **Example**: ``` <environment template="sunset" ambient="1.4"/>```
 
   - fogColor (vec) - Color used for distance fog\
-   **Example**: ``` <environment template="foggy" fogColor="1 0.4 0.4"/>```\
+   **Example**: ``` <environment template="foggy" fogColor="1 0.4 0.4"/>```
+
    <img src="images/Fog.png" width="500">
 
   - fogParams (vec4) - Four fog parameters: fog start, fog end, fog amount, fog exponent (higher gives steeper falloff along y axis)\
@@ -146,7 +147,8 @@ These are the examples of the XML in use
     **Example**: ``` <vox pos="0 3 -4" file="LEVEL/example.vox"/>```
 
   - object (string?) - Vox file sub object. Objects can be named under the outline in magicavoxel.\
-   **Example**: ``` <vox pos="4.5 1 -1" file="LEVEL/car.vox" object="wheel"/>```\
+   **Example**: ``` <vox pos="4.5 1 -1" file="LEVEL/car.vox" object="wheel"/>```
+
   <img src="images/outline.png" width="200">
 
   - pos (vec3) - Position in meters\
@@ -155,7 +157,8 @@ These are the examples of the XML in use
   - rot (vec3) - Rotation in degrees (e.g. 0-360) (example value to rotate backwards: rot="0 180 0")
 
   - scale (int?) - Voxel scaling. Use for background objects only with disabled collisions. Below the object on the left has a scale of 1 and the one on the right has a scale of 0.2.\
-    **Example**: ``` <vox pos="2.7 1 0" file="LEVEL/box.vox" scale="0.2"/>```\
+    **Example**: ``` <vox pos="2.7 1 0" file="LEVEL/box.vox" scale="0.2"/>```
+
   <img src="images/scale.png" width="500">
 
 ## Light		
@@ -167,7 +170,8 @@ These are the examples of the XML in use
    <img src="images/sphereLight.png" width="350"> | <img src="images/coneLight.png" width="350"> | <img src="images/areaLight.png" width="350">
 
   - color (vec) - Light color RGB value. Do not include intensity here. All values should be in between zero and one.\
-    **Example**: ``` <light pos="0 2.5 0" scale="3" type="cone" color="1 0.9 0.3"/>```\
+    **Example**: ``` <light pos="0 2.5 0" scale="3" type="cone" color="1 0.9 0.3"/>```
+
   <img src="images/lightcolor.png" width="500">
 
   - scale (float?) - Light intensity\
@@ -184,7 +188,7 @@ These are the examples of the XML in use
    :--:|:--:
    <img src="images/lightAngleOne.png" width="500"> | <img src="images/lightAngleTwo.png" width="500">
 
-  - penumbra (int?) - Penumbra angle in the case of a cone type
+  - penumbra (int?) - Penumbra angle in the case of a cone type\
     **Example**: ``` <light pos="0 2.5 0" scale="3" type="cone" penumbra="65"/>```
      
    penumbra="0" | penumbra="50"
@@ -217,7 +221,8 @@ These are the examples of the XML in use
    <img src="images/lightFogscaleOne.png" width="500"> | <img src="images/lightFogscaleTwo.png" width="500">
 
   - fogiter (float?) - Quality of volumetric fog. Usually leave at one. For very bright and important lights, you may set increase it to avoid flickering.\
-    **Example**: ``` <light pos="0 2 6" rot="90 0 0" scale="4" type="cone" fogscale="2" fogiter="1"/>```\
+    **Example**: ``` <light pos="0 2 6" rot="90 0 0" scale="4" type="cone" fogscale="2" fogiter="1"/>```
+
    <img src="images/lightFogiter.png" width="500">
 
   - sound (string) - path [volume]
@@ -272,7 +277,8 @@ These are the examples of the XML in use
     **Example**: ``` <joint pos="-5 0 -0.3" type="ball" rotstrength="0.05" collide="true"/>```
 
   - limits (int?) - Optional min and max angle of hinge rotation\
-    **Example**: ``` <joint pos="-0.5 0 0" rot="0 90 0" type="prismatic" limits="-1 1">```\
+    **Example**: ``` <joint pos="-0.5 0 0" rot="0 90 0" type="prismatic" limits="-1 1">```
+
    <img src="images/limits.gif" width="500">
 
   - sound (bool) -Joint makes sound.\
