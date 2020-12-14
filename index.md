@@ -323,23 +323,39 @@ These are the examples of the XML in use
 
 
 ## VoxBox 		
-  - size (vec) - Size in voxels
-  - brush (string) - Magicavoxel file to use as brush or 3D texture
-  - object (string?) - Brush file subobject, if any
-  - offset (vec) - Offset into voxel brush, in voxels along x, y and z
-  - material (string) - Set material if no brush is given. Should be one of glass, wood, masonry, plaster, metal, heavymetal, rock, dirt, foliage, unphysical
-  - color (vec) - Color tint, RGB values between zero and one
-  - pbr (vec4) - Additinal PBR properties - reflectivity, shinyness, metalness and emissive. Emissive is in range 0-32, the others in range 0-1
+  - size (vec) - Size in voxels. The example below creates a voxbox that is 5 voxels long, 1 voxel high, and 5 voxels wide.\
+    **Example**: ``` <voxbox pos="1 10 0" size="5 1 5">```
+  - brush (string) - Magicavoxel file to use as brush or 3D texture\
+    **Example**: ``` <voxbox pos="10 3 10" size="10 1 10" brush="LEVEL/brush.vox"/>```
+    
+   vox file | voxbox
+   :--:|:--:
+   <img src="images/voxboxbrush.png" width="500"> | <img src="images/voxboxbrush2.png" width="500">
+
+  - object (string?) - Brush file subobject, if any\
+    **Example**: ``` <voxbox pos="10 3 10" size="10 1 10" brush="LEVEL/brush.vox" object="testBrush"/>```
+  - offset (vec) - Offset into voxel brush, in voxels along x, y and z\
+    **Example**: ``` <voxbox pos="10 3 10" size="10 1 10" brush="LEVEL/brush.vox" offset="1 0 0"/>```
+
+    <img src="images/brushOffset.png" width="500">
+
+  - material (string) - Set material if no brush is given. Should be one of glass, wood, masonry, plaster, metal, heavymetal, rock, dirt, foliage, unphysical\
+   **Example**: ``` <voxbox pos="9 0.5 5" size="10 1 10" material="wood" color="0.6 0.5 0.5"/>```
+
+  - color (vec) - Color tint, RGB values between zero and one\
+    **Example**: ``` <voxbox pos="9 0.5 5" size="10 1 10" color="1 0 0.3"/>```
+  - pbr (vec4) - Additinal PBR properties - reflectivity, shinyness, metalness and emissive. Emissive is in range 0-32, the others in range 0-1\
+    **Example**: ``` <voxbox pos="10 0.5 10" size="10 1 10" color="0.5 0.5 0.5" pbr="0.5 0 0 3"/>```
 
 ## Voxagon 
     - brush (string) - Magicavoxel file to use as brush or 3D texture
     - object (string) - Brush subobject, if any
     - offset (vec) - Offset into voxel brush, in voxels along x, y and z
     - axis (str) - Extrusion axis as seen in vox file. For floors this is z, for walls it is y
-    - extrude (unknown) - Extrution along axis
+    - extrude (unknown) - Extrusion along axis
 
 ## Vehicle	
-    - driven (bool) - 
+    - driven (bool) - Whether or not the vehicle on the start of the game is being driven by the player.
     - sound (string) - Sound preset (small, medium, truck, v8), optional pitch
     - spring (float) - Stiffness of suspension spring
     - damping (float) - Suspension damping
@@ -363,7 +379,7 @@ These are the examples of the XML in use
     - slack (float) - Desired slack. Can be negative for more tension.
     - strength (float) - Rope strength. Negative is infinite.
     - maxstretch (float) - Rope breaks if stretching more than this
-    Exemple of rope usage
+    Example of rope usage
     
 ### Usage
 ```xml
